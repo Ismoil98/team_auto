@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CarsCard from './CarsCard'
+import { MdChevronRight } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const HomeCategory = () => {
     const URL='https://autoapi.dezinfeksiyatashkent.uz/api'
@@ -65,19 +67,19 @@ const HomeCategory = () => {
         <div className='container'>
             <div>
                 {
-                    maindata.map(x=>(
-                        <>
+                    maindata.map((x,i)=>(
+                        <div key={i} className='my-14'>
                         <div className='flex items-center justify-between mb-6'>
                             <h2 className='text-4xl text-white'>
                                 {x[0].category.name_en}
                             </h2>
 
-                            <button className='flex items-center text-white gap-2 text-xl group'>
+                            <Link to={'/'} className='flex items-center text-white gap-2 text-xl group'>
                                 See All
-                                <span className='border-[1px] border-white flex items-center justify-center p-2 rounded-full transition-transform duration-300 group-hover:translate-x-5'>
-                                    right
+                                <span className='border-[1px] border-white text-xl flex items-center p-1 justify-center  rounded-full transition-transform duration-300 group-hover:translate-x-5'>
+                                    <MdChevronRight/>
                                 </span>
-                            </button>
+                            </Link>
                         </div>
 
                         <div className='flex items-center gap-10'>
@@ -89,7 +91,7 @@ const HomeCategory = () => {
                         )
                         }
                         </div>
-                        </>
+                        </div>
                     ))
                 }
             </div>
