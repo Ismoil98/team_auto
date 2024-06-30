@@ -1,12 +1,20 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from 'react'
 import CarsCard from "../../components/CarsCard/CarsCard";
 
 const carsPage = () => {
 
-	const [ cars, setCars ] = useState([]);
-	const [ category, setCategory ] = useState([]);
-	const [ brand, setBrand ] = useState([]);
-	const [ model, setModel ] = useState([]);
+	const [cars, setCars] = useState([]);
+	const [category, setCategory] = useState([]);
+	const [brand, setBrand] = useState([]);
+	const [model, setModel] = useState([]);
+	const [selectedCategories, setSelectedCategories] = useState([]);
+	const [selectedBrands, setSelectedBrands] = useState([]);
+	const [selectedModel, setSelectedModel] = useState([]);
+	const [filteredCars, setFilteredCars] = useState([]);
+	const [filteredModels, setFilteredModels] = useState([]);
 
 	const API = "https://autoapi.dezinfeksiyatashkent.uz/api";
 
@@ -34,22 +42,81 @@ const carsPage = () => {
 	const getCars = () => {
 		fetch(`${API}/cars`)
 			.then((response) => response.json())
-			.then((res) => setCars(res.data))
+			.then((res) => {
+				setCars(res.data);
+				setFilteredCars(res.data);
+			})
 			.catch((err) => console.log(err))
 	}
 	
-	
 	useEffect(() => {
-		getCategories()
-		getBrands()
-		getModels()
-		getCars()
+		getCategories();
+		getBrands();
+		getModels();
+		getCars();
 	}, []);
+
+	const handleCategoryChange = (e) => {
+		const value = e.target.value;
+		setSelectedCategories(prevState =>
+			prevState.includes(value) ? prevState.filter(item => item !== value) : [...prevState, value]
+		);
+	};
+
+	const handleBrandChange = (e) => {
+		const value = e.target.value;
+		setSelectedBrands(prevState =>
+			prevState.includes(value) ? prevState.filter(item => item !== value) : [...prevState, value]
+		);
+	};
+
+	useEffect(() => {
+		if (selectedBrands.length > 0) {
+			const tempModels = model.filter(m => selectedBrands.includes(m.brand_title));
+			setFilteredModels(tempModels);
+		} else {
+			setFilteredModels(model);
+		}
+	}, [selectedBrands, model]);
+
+	const handleModelChange = (e) => {
+		setSelectedModel(e.target.value);
+	};
+
+	const applyFilters = () => {
+		let tempCars = cars;
+
+		if (selectedCategories.length > 0) {
+			tempCars = tempCars.filter(car => selectedCategories.includes(car.category.name_en));
+		}
+
+		if (selectedBrands.length > 0) {
+			tempCars = tempCars.filter(car => selectedBrands.includes(car.brand.title));
+		}
+
+		if (selectedModel) {
+			tempCars = tempCars.filter(car => car.model.name === selectedModel);
+		}
+
+		setFilteredCars(tempCars);
+	};
+
+	const resetFilters = () => {
+		setSelectedCategories([]);
+		setSelectedBrands([]);
+		setSelectedModel('');
+		setFilteredCars(cars);
+	};
+
+	useEffect(() => {
+		applyFilters();
+	}, [selectedCategories, selectedBrands, selectedModel]);
+
 
 	return (
 		<div className="carsPage flex justify-between">
 			<div className="w-full flex">
-				<div className="overlay py-20 px-8 w-[25%]  bg-[#272933]">
+				<div className="overlay py-20 px-8 w-[30%]  bg-[#272933]">
 					<h3 className="font-semibold text-white pb-12 text-2xl">Filter By</h3>
 
 					<ul className="mb-12">
@@ -101,7 +168,15 @@ const carsPage = () => {
 						{
 							category.map((el, index) => (
 								<li key={index} className="flex items-center pb-6">
-									<input className="cursor-pointer size-4" type="checkbox" name={`car${index}`} id={`car${index}`} />
+									<input
+										className="cursor-pointer size-4"
+										type="checkbox"
+										name={`car${index}`}
+										id={`car${index}`}
+										value={el.name_en}
+										checked={selectedCategories.includes(el.name_en)}
+										onChange={handleCategoryChange}
+									/>
 									<label htmlFor={`car${index}`} className="text-white ml-3 cursor-pointer">{el.name_en}</label>
 								</li>
 							))
@@ -113,7 +188,16 @@ const carsPage = () => {
 						{
 							brand.map((el, index) => (
 								<li key={index} className="flex items-center pb-6">
-									<input className="cursor-pointer size-4" type="checkbox" name={`brand${index}`} id={`brand${index}`}/>
+									{console.log()}
+									<input
+										className="cursor-pointer size-4"
+										type="checkbox"
+										name={`brand${index}`}
+										id={`brand${index}`}
+										value={el.title}
+										checked={selectedBrands.includes(el.title)}
+										onChange={handleBrandChange}
+									/>
 									<label htmlFor={`brand${index}`} className="text-white ml-3 cursor-pointer">{el.title}</label>
 								</li>
 							))
@@ -121,7 +205,14 @@ const carsPage = () => {
 					</ul>
 
 					<h4 className="text-2xl text-white pb-6">Model</h4>
-					<select className="mb-10 px-4 py-5 block w-full outline-none rounded-lg cursor-pointer" name="models" id="models">
+					<select
+						className="mb-10 px-4 py-5 block w-full outline-none rounded-lg cursor-pointer"
+						name="models"
+						id="models"
+						value={selectedModel}
+						onChange={handleModelChange}
+					>
+						{/* <option value="">All Models</option> */}
 						{
 							model.map((el, index) => (
 								<option key={index} className="cursor-pointer p-4" value={el.brand_title}>{el.brand_title}</option>
@@ -129,13 +220,15 @@ const carsPage = () => {
 						}
 					</select>
 
-					<button className="text-white px-10 py-5 border rounded-xl">Reset</button>
-					<button className="text-white px-10 py-5">Apply filter</button>
+					<div className="flex items-center justify-between">
+						<button className="text-white px-10 py-5 border rounded-xl" onClick={resetFilters}>Reset</button>
+						<button className="text-white px-10 py-5 border-transparent rounded-xl bg-[#009a00]" onClick={applyFilters}>Apply filter</button>
+					</div>
 				</div>
 
-				<div className="main w-[80%] grid grid-cols-3 grid-rows-5 container">
+				<div className="main w-[80%] grid grid-cols-3 grid-rows-4 container">
 					{
-						cars.map((el, index) => (
+						filteredCars.map((el, index) => (
 							<CarsCard
 								key={index}
 								url={API}
@@ -148,7 +241,7 @@ const carsPage = () => {
 							/>
 						))
 					}
-					
+
 				</div>
 			</div>
 		</div>
