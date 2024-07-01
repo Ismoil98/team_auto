@@ -4,10 +4,13 @@ import {Home, Blogs, CarsAbout, CarsPage, Contacts, Faq, Terms, Uslugi} from './
 import Loader from './components/loader/Loader'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import PageFirst from './pages/blogs/BlogInnerPage/PageFirst/PageFirst'
+import PageSecond from './pages/blogs/BlogInnerPage/PageSecond/PageSecond'
+import PageThird from './pages/blogs/BlogInnerPage/PageThird/PageThird'
 
 const App = () => {
   return (
-    <div className='bg-cyan-300'>
+    <div className='bg-black'>
       <BrowserRouter>
         <Header/>
         <Routes>
@@ -20,7 +23,7 @@ const App = () => {
           }
           />
           <Route 
-          path='/blogs'
+          path={`/blogs/:id`}
           element={
             <Suspense fallback={<Loader/>}>
               <Blogs/>
@@ -74,6 +77,18 @@ const App = () => {
               <Uslugi/>
             </Suspense>
           }
+          />
+           <Route
+            path='/firstPage'
+            element={<PageFirst/>}
+          />
+          <Route
+           path='/secondBlogPage'
+           element={<PageSecond/>}
+          />
+           <Route
+           path='/thirdBlogPage'
+           element={<PageThird/>}
           />
         </Routes>
         <Footer/>
