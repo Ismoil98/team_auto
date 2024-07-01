@@ -21,46 +21,46 @@ const uslugi = () => {
 
 
 
-          <div className="first-card__card max-w-[360px]">
+          <div className="first-card__card max-w-[360px] ">
             <img className='rounded-[10px] h-[235px]' src={saharaCar} alt="" />
-            <h2>BASIC</h2>
-            <div className="first-card__person flex gap-[20px]">
-              <p>1000</p>
-              <p>one person</p>
+            <h2 className='first-card__title pt-[10px] pb-[30px] text-[24px] font-normal'>BASIC</h2>
+            <div className="first-card__person flex gap-[20px] align-center pb-[20px]">
+              <p className='border-[1px] p-[5px] border-lime-600 items-center text-[24px] rounded-[8px]'>1000</p>
+              <p className='text-[18px] pt-[7px]'>one person</p>
             </div>
-            <h3>Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.</h3>
-            <h3>Package Inclusions:</h3>
-            <div className="card-item flex gap-[20px]">
+            <h3 className='text-[18px]'>Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.</h3>
+            <h3 className='text-[24px] pt-[7px] pb-[30px]'>Package Inclusions:</h3>
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Premium Transfer to camp</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
-              <span>Dune Buggy riding 1.5 hours</span>
+              <span >Dune Buggy riding 1.5 hours</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Cuadro 15 min</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Falcone shoting</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Camel</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>VIP room</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Fruits, Drinks, BBQ</span>
             </div>
@@ -70,46 +70,46 @@ const uslugi = () => {
 
           </div>
 
-          <div className="first-card__card max-w-[360px]">
-            <img src={saharaCar} alt="" />
-            <h2>BASIC</h2>
-            <div className="first-card__person flex gap-[20px]">
-              <p>1000</p>
-              <p>one person</p>
+          <div className="first-card__card max-w-[360px] ">
+            <img className='rounded-[10px] h-[235px]' src={saharaCar} alt="" />
+            <h2 className='first-card__title pt-[10px] pb-[30px] text-[24px] font-normal'>BASIC</h2>
+            <div className="first-card__person flex gap-[20px] align-center pb-[20px]">
+              <p className='border-[1px] p-[5px] border-lime-600 items-center text-[24px] rounded-[8px]'>1000</p>
+              <p className='text-[18px] pt-[7px]'>one person</p>
             </div>
-            <h3>Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.</h3>
-            <h3>Package Inclusions:</h3>
-            <div className="card-item flex gap-[20px]">
+            <h3 className='text-[18px]'>Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.</h3>
+            <h3 className='text-[24px] pt-[7px] pb-[30px]'>Package Inclusions:</h3>
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Premium Transfer to camp</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
-              <span>Dune Buggy riding 1.5 hours</span>
+              <span >Dune Buggy riding 1.5 hours</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Cuadro 15 min</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Falcone shoting</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Camel</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>VIP room</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Fruits, Drinks, BBQ</span>
             </div>
@@ -119,46 +119,46 @@ const uslugi = () => {
 
           </div>
 
-          <div className="first-card__card max-w-[360px]">
-            <img src={saharaCar} alt="" />
-            <h2>BASIC</h2>
-            <div className="first-card__person flex gap-[20px]">
-              <p>1000</p>
-              <p>one person</p>
+          <div className="first-card__card max-w-[360px] ">
+            <img className='rounded-[10px] h-[235px]' src={saharaCar} alt="" />
+            <h2 className='first-card__title pt-[10px] pb-[30px] text-[24px] font-normal'>BASIC</h2>
+            <div className="first-card__person flex gap-[20px] align-center pb-[20px]">
+              <p className='border-[1px] p-[5px] border-lime-600 items-center text-[24px] rounded-[8px]'>1000</p>
+              <p className='text-[18px] pt-[7px]'>one person</p>
             </div>
-            <h3>Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.</h3>
-            <h3>Package Inclusions:</h3>
-            <div className="card-item flex gap-[20px]">
+            <h3 className='text-[18px]'>Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.</h3>
+            <h3 className='text-[24px] pt-[7px] pb-[30px]'>Package Inclusions:</h3>
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Premium Transfer to camp</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
-              <span>Dune Buggy riding 1.5 hours</span>
+              <span >Dune Buggy riding 1.5 hours</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Cuadro 15 min</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Falcone shoting</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Camel</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>VIP room</span>
             </div>
 
-            <div className="card-item flex gap-[20px]">
+            <div className="card-item flex gap-[20px] pb-[25px]">
               <img src={checkCard} alt="" />
               <span>Fruits, Drinks, BBQ</span>
             </div>
@@ -167,6 +167,7 @@ const uslugi = () => {
 
 
           </div>
+
         </div>
 
       </div>
