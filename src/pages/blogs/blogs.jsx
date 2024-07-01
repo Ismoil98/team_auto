@@ -31,7 +31,7 @@ const blogs = () => {
                 <div className=' flex justify-between justify-items-center mt-10'>
                    <p>22 Sep 2024</p>
                    <div>
-                     <Link to={'/firstPage'}>
+                     <Link onClick={() => window.scrollTo({top:0})} to={'/firstPage'}>
                        <ImNext className='text-[1.5rem] hover:translate-x-2 ease-out duration-300'/>
                      </Link>
                    </div>
@@ -56,7 +56,7 @@ const blogs = () => {
                 <div className='flex justify-between justify-items-center mt-10'>
                    <p>17 Nov 2024</p>
                    <div>
-                     <Link to={'/secondBlogPage'}>
+                     <Link onClick={() => window.scrollTo({top:0})} to={'/secondBlogPage'}>
                        <ImNext className='text-[1.5rem] hover:translate-x-2 ease-out duration-300'/>
                      </Link>
                    </div>
@@ -80,7 +80,7 @@ const blogs = () => {
                 <div className='flex justify-between justify-items-center mt-10'>
                    <p>18 Oct 2024</p>
                    <div>
-                     <Link to={'/thirdBlogPage'}>
+                     <Link onClick={() => window.scrollTo({top:0})} to={'/thirdBlogPage'}>
                        <ImNext className='text-[1.5rem] hover:translate-x-2 ease-out duration-300'/>
                      </Link>
                    </div>
