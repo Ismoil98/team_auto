@@ -7,7 +7,7 @@ import Footer from './components/footer/Footer'
 
 const App = () => {
   return (
-    <div className=''>
+    <div className='bg-[#1E1F27]'> 
       <BrowserRouter>
         <Header/>
         <Routes>
