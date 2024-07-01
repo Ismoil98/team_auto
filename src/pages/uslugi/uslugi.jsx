@@ -1,5 +1,5 @@
 import React from 'react'
-import ServicesCard from './ServicesCard'
+import ServicesCard from './servicesCard'
 import checkCard from '/card-check.png'
 import saharaCar from '/sahara-car.jpg'
 

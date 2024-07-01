@@ -6,9 +6,6 @@ export default function FirstCard() {
             <p>
                 Sports Car Rental Dubai Style Tour in Dubai
             </p>
-
-          
-
         </div>
     )
 }
