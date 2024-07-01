@@ -21,7 +21,7 @@ const Footer = () => {
 
 
   return (
-    <div className='  h-[100vh] pt-20 text-white bg-gray-900 p-5'>
+    <div className='h-[100vh] pt-20 text-white bg-gray-900 p-5'>
       <div className='container mx-auto px-4'>
         
           <div className='flex justify-around items-center'>

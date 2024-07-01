@@ -8,9 +8,6 @@ const uslugi = () => {
       <div className="container xl text-white pt-[50px] pb-[50px]">
         <p>Luxury Cars for Rent in Dubai / Services</p>
         <ServicesCard />
-
-      
-
       </div>
 
     </div>

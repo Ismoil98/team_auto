@@ -10,7 +10,7 @@ const Header = () => {
         {/* <Link to={}>BRAND</Link> */}
         <Link className='mx-4 no-underline' to={'/uslugi'}>SERVICES</Link>
         <Link className='mx-4 no-underline' to={'/about'}>ABOUT US</Link>
-        <Link className='mx-4 no-underline' to={'/contact'}>CONTACTS</Link>
+        <Link className='mx-4 no-underline' to={'/contacts'}>CONTACTS</Link>
         <Link className='mx-4 no-underline' to={'/blogs'}>BLOG</Link>
       </nav>
     </div>
