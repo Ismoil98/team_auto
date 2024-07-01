@@ -20,7 +20,7 @@ const App = () => {
           }
           />
           <Route 
-          path='/blogs'
+          path="/blogs"
           element={
             <Suspense fallback={<Loader/>}>
               <Blogs/>
