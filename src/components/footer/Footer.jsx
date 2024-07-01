@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 const Footer = () => {
 
   const [category, setCategory] = useState([]);
@@ -49,7 +49,7 @@ const Footer = () => {
                   <Link to={"/"} className='font-bold text-xl'>
                      Cars
                   </Link>
-                  <div className=''>
+                  <div className='mt-5'>
                     {category && category.map((item, index)=> (
                       <div key={index}>
                        <Link to={`/blogs/${item.id}`} className='text-left text-gray-500 text-sm mt-[100px]'>{item.name_en}</Link>
@@ -72,7 +72,7 @@ const Footer = () => {
                        CONTACTS
                      </Link>
                      <p className='text-sm text-gray-500 mt-1'>
-                       Elite 3 Sports City, Dubai 26W8 24J, United Arab <br /> Emirates
+                       Elite 3 Sports City, Dubai 26W8 24J, <br /> United Arab  Emirates
                      </p>
                      <p className='text-gray-500 text-sm'>
                      +971 55 8462124 <br />
@@ -86,9 +86,24 @@ const Footer = () => {
                      ABOUT US
                   </Link>
                   <div className='flex flex-col'>
-                   <Link>
-                    SERVICES
+                   <Link to={"/"} className='text-gray-500 text-sm mt-5'>
+                    Our Team
                    </Link>
+                   <Link to={"/"} className='text-gray-500 text-sm mt-5'>
+                    FAQ
+                   </Link>
+
+                   <div className='mt-28'>
+                     <Link to={"/"} className='font-bold text-xl'>
+                       Follow Us
+                     </Link>
+
+                     <div className='mt-2 flex items-center'>
+                     <Link to={"/"}><FaFacebook  className='text-xl text-gray-500 hover:text-red-500 ml-2'/></Link>
+                     <FaInstagram to={"/"} className='text-xl text-gray-500 hover:text-red-500 ml-2'/>
+                     <FaYoutube to={"/"} className='text-xl text-gray-500 hover:text-red-500 ml-2'/>
+                     </div>
+                   </div>
                   </div>
                </div>
              </div>
