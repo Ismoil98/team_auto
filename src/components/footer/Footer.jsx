@@ -59,7 +59,7 @@ const Footer = () => {
                </div>
 
                <div className='flex flex-col mr-58 content-between'>
-                  <Link to={"/"} className='font-bold text-xl'>
+                  <Link to={"/blogs"} className='font-bold text-xl'>
                      BLOG
                   </Link>
                   <div className='flex flex-col'>

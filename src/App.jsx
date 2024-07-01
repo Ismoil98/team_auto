@@ -23,7 +23,7 @@ const App = () => {
           }
           />
           <Route 
-          path={`/blogs/:id`}
+          path="/blogs"
           element={
             <Suspense fallback={<Loader/>}>
               <Blogs/>
