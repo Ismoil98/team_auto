@@ -4,7 +4,7 @@ import images from './Images/images'
 import { ImNext } from "react-icons/im";
 const blogs = () => {
   return (
-    <div className='text-white h-[100vh] bg-gray-950 overflow-hidden  overflow-y-auto'>
+    <div className='text-white h-auto bg-gray-950 '>
       <div className='container mx-auto px-4'>
         <div className='pt-10'>
          <Link to={"/"} className='text-gray-300 text-[0.9rem]'>Luxury Cars for Rent in Dubai/Blog</Link>

@@ -100,8 +100,8 @@ const Footer = () => {
 
                      <div className='mt-2 flex items-center'>
                      <Link to={"/"}><FaFacebook  className='text-xl text-gray-500 hover:text-red-500 ml-2'/></Link>
-                     <FaInstagram to={"/"} className='text-xl text-gray-500 hover:text-red-500 ml-2'/>
-                     <FaYoutube to={"/"} className='text-xl text-gray-500 hover:text-red-500 ml-2'/>
+                     <Link to={"/"}><FaInstagram to={"/"} className='text-xl text-gray-500 hover:text-red-500 ml-2'/></Link>
+                     <Link to={"/"}><FaYoutube to={"/"} className='text-xl text-gray-500 hover:text-red-500 ml-2'/></Link>
                      </div>
                    </div>
                   </div>
