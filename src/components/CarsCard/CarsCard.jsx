@@ -2,16 +2,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from "react-router-dom";
-// import { FaWhatsapp, FaTelegram } from "react-icons/fa";
+import { FaWhatsapp, FaTelegram } from "react-icons/fa";
+import { MdWhatsapp } from "react-icons/md";
 
 
-const CarsCard = ({ url, id, image, brand, model, priceAED, priceUSD }) => {
+const CarsCard = ({ id, image, brand, model, priceAED, priceUSD }) => {
     return (
-        <div className="CarsCard w-[95%] p-8 rounded-2xl m-4 border border-solid border-[#ffffff2f]">
-            <Link to={`${url}/${id}`} className="flex justify-between flex-col">
+        <div className="CarsCard w-[95%] py-5 px-5 rounded-2xl m-4 border border-solid border-[#ffffff2f]">
+            <Link to={`/cars/${id}`} className="flex justify-between flex-col">
                 <div className="flex justify-center items-center mb-10 h-[200px]">
                     <img
-                        className="w-[100%]"
+                        className="w-[90%]"
                         src={`https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/${image}`}
                         alt={image}
                     />
@@ -29,13 +30,14 @@ const CarsCard = ({ url, id, image, brand, model, priceAED, priceUSD }) => {
             </Link>
 
             <div className="w-[100%] flex items-center justify-between">
-                <Link className="bg-[#00c600] text-white px-6 py-4 rounded-xl" to="https://wa.me/971558462124">
-                    {/* <FaWhatsapp /> */}
+                <Link className="w-[47%] text-md flex items-center justify-between bg-[#00c600] text-white px-4 py-4 rounded-xl" to="https://wa.me/971558462124">
+                    {/* <FaWhatsapp  /> */}
+                    <MdWhatsapp className="size-5" />
                     WhatsApp
                 </Link>
 
-                <Link className="bg-[#2727e0] text-white px-6 py-4 rounded-xl" to="https://t.me/+971558462124">
-                    {/* <FaTelegram /> */}
+                <Link className="w-[47%] text-md flex items-center justify-between bg-[#2727e0] text-white px-4 py-4 rounded-xl" to="https://t.me/+971558462124">
+                    <FaTelegram className="size-5" />
                     Telegram
                 </Link>
             </div>
