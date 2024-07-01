@@ -1,6 +1,6 @@
 import {Suspense} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import {Home, Blogs, CarsAbout, CarsPage, Contacts, Faq, Terms, Uslugi, AboutUs} from './pages/index'
+import {Home, Blogs, CarsAbout, CarsPage, Contacts, Faq, Terms, Uslugi, UslugiFirst, UslugiSecond, AboutUs} from './pages/index'
 import Loader from './components/loader/Loader'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
@@ -72,6 +72,22 @@ const App = () => {
           element={
             <Suspense fallback={<Loader/>}>
               <Uslugi/>
+            </Suspense>
+          }
+          />
+          <Route 
+          path='/uslugi/first'
+          element={
+            <Suspense fallback={<Loader/>}>
+              <UslugiFirst/>
+            </Suspense>
+          }
+          />
+          <Route 
+          path='/uslugi/second'
+          element={
+            <Suspense fallback={<Loader/>}>
+              <UslugiSecond/>
             </Suspense>
           }
           />

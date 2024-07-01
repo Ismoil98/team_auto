@@ -9,6 +9,8 @@ const Faq = lazy(()=> import("./faq/faq"))
 const Home = lazy(()=> import("./home/home"))
 const Terms = lazy(()=> import("./terms/terms"))
 const Uslugi = lazy(()=> import("./uslugi/uslugi"))
+const UslugiFirst = lazy(()=> import("./uslugi/UslugiFirst"))
+const UslugiSecond = lazy(()=> import("./uslugi/UslugiSecond"))
 const AboutUs = lazy(()=> import("./aboutUs/aboutUs"))
 
 export {
@@ -20,5 +22,7 @@ export {
     Home,
     Terms,
     Uslugi,
+    UslugiFirst,
+    UslugiSecond,
     AboutUs
 };
