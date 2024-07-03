@@ -1,5 +1,5 @@
 import React from 'react'
-import ServicesCard from './ServicesCard'
+import ServicesCard from './servicesCard'
 
 const uslugi = () => {
   return (
