@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import Message from "../../components/CarsAbout/Message";
 
 const carsAbout = () => {
   // const {id}= useParams();
@@ -66,9 +67,10 @@ const carsAbout = () => {
                     image={`https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/${image.image.src}`}
                     title={image.title}
                   />
-                  
+
                 ))}
               </Swiper>
+              <Message/>
             </div>
           </div>
           <div className="infos"></div>
