@@ -46,34 +46,35 @@ const carsAbout = () => {
   );
 
   return (
-    // <div className="container">
-    //   <div className="first">
-    //     <div className="swipers">
-    //       <div></div>
-    //       <div>
-    //         <Swiper
-    //           cssMode={true}
-    //           navigation={true}
-    //           pagination={true}
-    //           mousewheel={true}
-    //           keyboard={true}
-    //           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-    //           className="mySwiper w-full h-full"
-    //         >
-    //           {data.car_images.map((image, index) => (
-    //             <CustomSlide
-    //               key={index}
-    //               image={`https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/${image.image.src}`}
-    //               title={image.title}
-    //             />
-    //           ))}
-    //         </Swiper>
-    //       </div>
-    //     </div>
-    //     <div className="infos"></div>
-    //   </div>
-    // </div>
-  );
+      <div className="container">
+        <div className="first">
+          <div className="swipers">
+            <div></div>
+            <div>
+              <Swiper
+                cssMode={true}
+                navigation={true}
+                pagination={true}
+                mousewheel={true}
+                keyboard={true}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                className="mySwiper w-full h-full"
+              >
+                {data.car_images.map((image, index) => (
+                  <CustomSlide
+                    key={index}
+                    image={`https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/${image.image.src}`}
+                    title={image.title}
+                  />
+                  
+                ))}
+              </Swiper>
+            </div>
+          </div>
+          <div className="infos"></div>
+        </div>
+      </div>
+    );
 };
 
 export default carsAbout;
