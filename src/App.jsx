@@ -74,6 +74,15 @@ const App = () => {
               <Uslugi/>
             </Suspense>
           }
+          
+          />
+          <Route 
+          path='/carsinfo'
+          element={
+            <Suspense fallback={<Loader/>}>
+              <CarsAbout/>
+            </Suspense>
+          }
           />
         </Routes>
         <Footer/>
