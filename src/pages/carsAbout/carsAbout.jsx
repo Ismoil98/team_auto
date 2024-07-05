@@ -19,11 +19,11 @@ const carsAbout = () => {
     axios
       .get(`https://autoapi.dezinfeksiyatashkent.uz/api/cars/${id}`)
       .then((res) => {
-        console.log(res.data.data.car_images);
+        // console.log(res.data.data.car_images);
         setData(res.data.data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       })
       .finally(() => setLoading(false));
   }, [id]);
