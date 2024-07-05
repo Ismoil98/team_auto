@@ -136,7 +136,9 @@ const App = () => {
             </Suspense>
           }
           />
+		
         </Routes>
+		
         <Footer/>
       </BrowserRouter>
     </div>

@@ -87,7 +87,7 @@ const Footer = () => {
                    <Link onClick={() => window.scrollTo({top:0})} to={"/"} className='text-gray-500 text-sm mt-5'>
                     Our Team
                    </Link>
-                   <Link onClick={() => window.scrollTo({top:0})} to={"/"} className='text-gray-500 text-sm mt-5'>
+                   <Link onClick={() => window.scrollTo({top:0})} to={"/Faq"} className='text-gray-500 text-sm mt-5'>
                     FAQ
                    </Link>
 
