@@ -11,7 +11,7 @@ const Footer = () => {
     .then(res=> res.json())
     .then(category=> {
       setCategory(category.data)
-      console.log(category)
+      
     })
   }
 
