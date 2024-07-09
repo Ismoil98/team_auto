@@ -1,6 +1,9 @@
 import {Suspense} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {Home, Blogs, CarsAbout, CarsPage, Contacts, Faq, Terms, Uslugi, UslugiFirst, UslugiSecond, AboutUs} from './pages/index'
+import PageFirst from './pages/blogs/BlogInnerPage/PageFirst/PageFirst'
+import PageSecond from './pages/blogs/BlogInnerPage/PageSecond/PageSecond'
+import PageThird from './pages/blogs/BlogInnerPage/PageThird/PageThird'
 import Loader from './components/loader/Loader'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
@@ -74,7 +77,17 @@ const App = () => {
               <Uslugi/>
             </Suspense>
           }
+          
           />
+          <Route 
+          path='/carsinfo'
+          element={
+            <Suspense fallback={<Loader/>}>
+              <CarsAbout/>
+            </Suspense>
+          }
+          />
+
           <Route 
           path='/uslugi/first'
           element={
@@ -99,7 +112,33 @@ const App = () => {
             </Suspense>
           }
           />
+          <Route 
+          path='/firstPage'
+          element={
+            <Suspense fallback={<Loader/>}>
+              <PageFirst/>
+            </Suspense>
+          }
+          />
+          <Route 
+          path='/secondBlogPage'
+          element={
+            <Suspense fallback={<Loader/>}>
+              <PageSecond/>
+            </Suspense>
+          }
+          />
+          <Route 
+          path='/thirdBlogPage'
+          element={
+            <Suspense fallback={<Loader/>}>
+              <PageThird/>
+            </Suspense>
+          }
+          />
+		
         </Routes>
+		
         <Footer/>
       </BrowserRouter>
     </div>

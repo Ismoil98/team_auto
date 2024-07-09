@@ -62,10 +62,6 @@ const HomeCategory = () => {
         setCategories(obj)
     }, [categorydata, carsdata]);
 
-    
-    console.log(maindata);
-    console.log(carsdata);
-    console.log(categories);
   return (
     <div>
         <div className='container'>
