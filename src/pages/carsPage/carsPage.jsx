@@ -104,19 +104,19 @@ const carsPage = () => {
 	const resetFilters = () => {
 		setSelectedCategories([]);
 		setSelectedBrands([]);
-		setSelectedModel('');
+		setSelectedModel([]);
 		setFilteredCars(cars);
 	};
 
 	useEffect(() => {
 		applyFilters();
-	}, [selectedCategories, selectedBrands, selectedModel]);
+	}, []);
 
 
 	return (
 		<div className="carsPage flex justify-between">
 			<div className="w-full flex">
-				<div className="overlay py-20 px-8 w-[30%]  bg-[#272933]">
+				<div className="overlay py-20 px-8 w-[25%]  bg-[#272933]">
 					<h3 className="font-semibold text-white pb-12 text-2xl">Filter By</h3>
 
 					<ul className="mb-12">
@@ -206,7 +206,7 @@ const carsPage = () => {
 
 					<h4 className="text-2xl text-white pb-6">Model</h4>
 					<select
-						className="mb-10 px-4 py-5 block w-full outline-none rounded-lg cursor-pointer"
+						className="mb-10 px-4 py-5 block w-full outline-none rounded-lg cursor-pointer text-black"
 						name="models"
 						id="models"
 						value={selectedModel}
@@ -231,7 +231,6 @@ const carsPage = () => {
 						filteredCars.map((el, index) => (
 							<CarsCard
 								key={index}
-								url={API}
 								id={el.brand.id}
 								brand={el.brand.title}
 								model={el.model.name}
