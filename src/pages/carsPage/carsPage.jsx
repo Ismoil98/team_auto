@@ -98,6 +98,8 @@ const carsPage = () => {
 			tempCars = tempCars.filter(car => car.model.name === selectedModel);
 		}
 
+		console.log(tempCars);
+		console.log(model);
 		setFilteredCars(tempCars);
 	};
 
@@ -210,11 +212,12 @@ const carsPage = () => {
 						name="models"
 						id="models"
 						value={selectedModel}
+						multiple={false}
 						onChange={handleModelChange}
 					>
-						{/* <option value="">All Models</option> */}
+						<option value="">All Models</option>
 						{
-							model.map((el, index) => (
+							filteredModels.map((el, index) => (
 								<option key={index} className="cursor-pointer p-4" value={el.brand_title}>{el.brand_title}</option>
 							))
 						}

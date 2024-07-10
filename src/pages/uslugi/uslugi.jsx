@@ -1,5 +1,9 @@
 import React from 'react'
+// <<<<<<< HEAD
 import ServicesCard from './servicesCard'
+// =======
+// import ServicesCard from './ServicesCard'
+// >>>>>>> b7a2e9e5deac8316f83a5009c13e7da2770df474
 
 const uslugi = () => {
   return (
